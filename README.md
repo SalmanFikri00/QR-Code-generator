@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# 🎨 QR Code Generator with Style - Vibe Coding Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah aplikasi QR code generator berbasis React.js yang dibuat dengan claude 3.7 sonnet dengan trae ide dengan hanya beberapa prompt klompek di bantu chat gpt untuk membuat prompt yang lengkap. bahkan sebagian besar README.md ini dibuat oleh chatgpt dan anda masih bisa bilang ai tidak akan bisa megganti kan programmer kedepannya? see the future brooo........
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Generate QR code dari teks atau URL
+- 🎨 Kustomisasi warna (foreground & background)
+- 🧩 Pilihan bentuk modul QR (dot, square, dll)
+- 💾 Download QR code dalam format PNG
+- 🧘‍♀️ Animasi smooth saat QR code muncul
+- 🌙 UI clean dan modern, dibangun dengan Tailwind CSS
+- 🧱 Komponen modular (Form input, QR preview, Customizer)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **React.js** – frontend framework
+- **Tailwind CSS** – untuk styling cepat dan responsive
+- **qr-code-styling** – library powerful untuk desain QR
+- **Vite / Create React App** – environment dev (tergantung preferensi)
+
+---
+
+## ⌨️ Prompt from Chatgpt
+
+
+```bash
+Buatkan saya sebuah aplikasi React.js yang bisa:
+
+1. Meng-generate QR code dari input URL atau teks apa pun.
+2. Menyediakan beberapa opsi desain QR code, seperti:
+   - Warna (foreground dan background)
+   - Bentuk modul (dot, square, dll)
+   - Style frame atau border
+3. Hasil QR code bisa langsung diunduh sebagai PNG.
+4. Tampilan clean dan modern, pakai Tailwind CSS.
+5. Jika memungkinkan, tambahkan animasi ringan saat QR code muncul.
+6. Jangan lupa buat komponen terpisah untuk:
+   - Input form
+   - Tampilan QR code
+   - Customizer / setting desain
+7. Libatkan library seperti `qrcode.react` atau `react-qr-code`, atau yang lebih fleksibel seperti `qr-code-styling`.
+
+Tambahan:
+- Gunakan React hooks (useState, useEffect)
+- Kode modular, rapi, dan gampang dipahami
+- Tolong buatkan juga preview QR code-nya real-time sesuai perubahan input/desain
+
 ```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Instalasi
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+git clone https://github.com/SalmanFikri00/QR-Code-generator.git
+cd QR-Code-generator
+npm install
+npm run dev
