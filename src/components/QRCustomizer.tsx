@@ -45,38 +45,38 @@ const QRCustomizer: React.FC<QRCustomizerProps> = ({ options, setOptions }) => {
   };
 
   return (
-    <div className="backdrop-blur-sm bg-white bg-opacity-10 p-6 rounded-xl border border-white border-opacity-30 shadow-lg">
-      <h3 className="text-xl font-medium mb-5 text-white">Kustomisasi QR Code</h3>
+    <div className="backdrop-blur-sm bg-gray-800 bg-opacity-50 p-6 rounded-xl border border-gray-700 shadow-lg">
+      <h3 className="text-xl font-medium mb-5 text-gray-200">Kustomisasi QR Code</h3>
       
       <div className="grid grid-cols-1 gap-5">
         {/* Warna Dot */}
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <label className="block text-sm font-medium text-white mb-2">
+        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Warna QR Code
           </label>
           <input
             type="color"
             value={options.dotsOptions.color}
             onChange={(e) => updateOptions('dotsOptions', 'color', e.target.value)}
-            className="w-full h-10 rounded-lg cursor-pointer"
+            className="w-full h-10 rounded-lg cursor-pointer bg-gray-800"
           />
         </div>
 
         {/* Warna Background */}
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <label className="block text-sm font-medium text-white mb-2">
+        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Warna Background
           </label>
           <div className="flex items-center space-x-3">
             <input
               type="color"
-              value={options.backgroundOptions.color === 'rgba(0, 0, 0, 0)' ? '#ffffff' : options.backgroundOptions.color}
+              value={options.backgroundOptions.color === 'rgba(0, 0, 0, 0)' ? '#1f2937' : options.backgroundOptions.color}
               onChange={(e) => updateOptions('backgroundOptions', 'color', e.target.value)}
-              className="w-full h-10 rounded-lg cursor-pointer"
+              className="w-full h-10 rounded-lg cursor-pointer bg-gray-800"
             />
             <button 
               onClick={setTransparentBackground}
-              className="px-3 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg text-white text-sm transition-all"
+              className="px-3 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-gray-200 text-sm transition-all"
             >
               Transparan
             </button>
@@ -84,17 +84,17 @@ const QRCustomizer: React.FC<QRCustomizerProps> = ({ options, setOptions }) => {
         </div>
 
         {/* Bentuk Dot */}
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <label className="block text-sm font-medium text-white mb-2">
+        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Bentuk Dot
           </label>
           <select
             value={options.dotsOptions.type}
             onChange={(e) => updateOptions('dotsOptions', 'type', e.target.value)}
-            className="w-full px-3 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white"
+            className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200"
           >
             {dotTypes.map((type) => (
-              <option key={type} value={type} className="bg-indigo-800 text-white">
+              <option key={type} value={type} className="bg-gray-800 text-gray-200">
                 {type.charAt(0).toUpperCase() + type.slice(1)}
               </option>
             ))}
@@ -102,17 +102,17 @@ const QRCustomizer: React.FC<QRCustomizerProps> = ({ options, setOptions }) => {
         </div>
 
         {/* Bentuk Corner Square */}
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <label className="block text-sm font-medium text-white mb-2">
+        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Bentuk Sudut
           </label>
           <select
             value={options.cornersSquareOptions.type}
             onChange={(e) => updateOptions('cornersSquareOptions', 'type', e.target.value)}
-            className="w-full px-3 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white"
+            className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200"
           >
             {cornerSquareTypes.map((type) => (
-              <option key={type} value={type} className="bg-indigo-800 text-white">
+              <option key={type} value={type} className="bg-gray-800 text-gray-200">
                 {type.charAt(0).toUpperCase() + type.slice(1)}
               </option>
             ))}
@@ -120,17 +120,17 @@ const QRCustomizer: React.FC<QRCustomizerProps> = ({ options, setOptions }) => {
         </div>
 
         {/* Bentuk Corner Dot */}
-        <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-          <label className="block text-sm font-medium text-white mb-2">
+        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Bentuk Titik Sudut
           </label>
           <select
             value={options.cornersDotOptions.type}
             onChange={(e) => updateOptions('cornersDotOptions', 'type', e.target.value)}
-            className="w-full px-3 py-2 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white"
+            className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200"
           >
             {cornerDotTypes.map((type) => (
-              <option key={type} value={type} className="bg-indigo-800 text-white">
+              <option key={type} value={type} className="bg-gray-800 text-gray-200">
                 {type.charAt(0).toUpperCase() + type.slice(1)}
               </option>
             ))}
